@@ -12,13 +12,14 @@
 			<div id="single-container" class="row">
 
 				<div class="sidebar-single col-md-2">
+					<?php if ( dynamic_sidebar('Login Sidebar') ) : else : endif; ?>
 					<?php if ( dynamic_sidebar('Recent Sidebar') ) : else : endif; ?>
 				</div>
 
 				<div id="inner-content" class="wrap cf col-md-10">
 
 					<div id="back-to-blog">
-						<a href="<?php echo get_home_url() . "/blog" ?>">&laquo; Blog</a>
+						<a href="<?php echo get_page_link( get_page_by_title( Blog )->ID);?>">&laquo; Blog</a>
 					</div>
 
 					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">

@@ -24,7 +24,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div id="albums-div" class="container-fluid">
+					<div class="sidebar-single col-md-2">
+						<?php if ( dynamic_sidebar('Login Sidebar') ) : else : endif; ?>
+					</div>
+					<div id="albums-div" class="col-md-10">
 						<h2 class="fadein">Day 2 Test</h2>
 						<p>Una galería de prueba</p>
 						<?php echo do_shortcode("[envira-gallery id='197']"); ?>

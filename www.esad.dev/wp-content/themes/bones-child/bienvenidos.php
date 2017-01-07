@@ -13,6 +13,9 @@
 			<div id="translate">
 				<?php if ( dynamic_sidebar('Translate Sidebar') ) : else : endif; ?>
 			</div>
+			<div class="home-login">
+				<?php if ( dynamic_sidebar('Login Sidebar') ) : else : endif; ?>
+			</div>
 			<img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/Logo.png" alt="Logo"/>
 			<p class="jumbo-text"><span class="jumbo-text-capital">E</span><span class="jumbo-text-normal">sta </span><span class="jumbo-text-capital">S</span><span class="jumbo-text-normal">emana </span><span class="jumbo-text-capital">A</span><span class="jumbo-text-normal">campada </span><span class="jumbo-text-capital">D</span><span class="jumbo-text-normal">ónde</span></p>
 		</div>
@@ -148,7 +151,7 @@
 					</div>
 
 					<div class="text-container">
-						<a href="<?php echo get_home_url() . "/blog" ?>">Blog &raquo;</a>
+						<a href="<?php echo get_page_link( get_page_by_title( Blog )->ID);?>">Blog &raquo;</a>
 					</div>
 
 				</div>

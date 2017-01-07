@@ -389,7 +389,7 @@ a{
 #blog-container{
 	max-width:1280px;
 	text-align: center;
-	padding:20px 0 0 0;
+	padding:20px 15px 0 0;
 	margin: 0 auto;
 }
 
@@ -406,7 +406,7 @@ a{
 #search-div{
 	font-family: Myriad Regular;
 	text-align: right;
-	padding-top:20px;
+	padding:20px 15px 0 0;
 }
 
 #search-div > form > div > label{
@@ -550,12 +550,11 @@ textarea.form-control{
 
 /* Recent Sidebar */
 
-#recent-entries{
-	border-right: 1px dotted #333333;
-}
+
 
 #recent-entries > ul{
 	list-style-type: none;
+	padding-left:15px;
 }
 
 #recent-entries > h2{
@@ -597,10 +596,15 @@ textarea.form-control{
 
 #upcoming-events > ul{
 	list-style-type: none;
+	padding-left:15px;
 }
 
 #upcoming-events > ul > li{
 	padding:5px 0 5px 0;
+}
+
+#post-135 > div.tribe-events-single-section > div > h3{
+	padding-left: 0;
 }
 
 .tribe-event-title{
@@ -873,6 +877,7 @@ div.tribe-events-single-section.tribe-events-event-meta.primary.tribe-clearfix{
 #search-container{
 	padding-top:30px;
 	text-align: center;
+	padding:0 15px 0 15px;
 }
 
 #main > h1{
@@ -953,6 +958,134 @@ fieldset[disabled] #wpforms-submit-200.active {
 .follow > h2{
 	text-align: center;
 }
+
+#follow-buttons{
+	text-align: center;
+	padding-top: 30px;
+}
+
+
+
+/* Login widget */
+
+.home-login{
+	position: absolute;
+	width:165px;
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	top:50px;
+	left:10px;
+	background: rgba(255,255,255,0.98);
+}
+
+.home-login h2{
+	padding-left:0;
+}
+
+.home-login .login-password{
+	padding-top:5px;
+}
+
+#login-widget{
+	width:165px;
+	position: relative;
+	text-align: center;
+	margin-bottom:20px;
+}
+
+#login-widget > form > p{
+	font-size: 10pt;
+}
+
+#login-widget > ul{
+	list-style-type: none;
+	font-size: 10pt;
+}
+
+#login-widget > .pagenav{
+	vertical-align: top;
+	text-align: center;
+	padding:0;
+}
+
+.login-submit > #wp-submit{
+	margin:5px 0 5px 0;
+	font-family: Myriad Regular;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: transparent;
+    border-radius: 4px;
+    font-size: 10pt;
+    font-weight: 500;
+    text-transform: none;
+    zoom: 0;
+    letter-spacing: normal;
+}
+.login-submit > #wp-submit:hover{
+	color: #fff;
+    background-color: #31b0d5;
+    border-color: transparent;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.login-submit > #wp-submit:focus{
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+#login-widget h2{
+	text-align: left;
+	padding-bottom:10px;
+}
+
+#login-widget .avatar_container{
+	display: inline-table;
+	margin-right:20px;
+}
+
+#login-widget .pagenav{
+	display: inline-table;
+	vertical-align: top;
+	text-align: center;
+}
+
+#loginform{
+	text-align: left;
+	padding-left: 15px;
+}
+
+#login-widget .login-password{
+	padding-top: 5px;
+}
+
+
+
+/* 404 */
+
+#post-not-found > header{
+	padding-top:10vh;
+}
+
+#post-not-found > header > a > img{
+	width: 125px;
+	padding-bottom: 3vh;
+}
+
+#post-not-found > header > h1{
+	font-family: Myriad Semi;
+	color: #08bbfe;
+}
+
+#post-not-found > .entry-content{
+	padding-top: 3vh;
+}
+
+#post-not-found > .search{
+	padding-top: 5vh;
+}
+
 
 
 

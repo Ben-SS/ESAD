@@ -10,7 +10,7 @@
 			<div id="toggle" class="row"><span class="glyphicon glyphicon-align-justify"></span></div>
 			<div id="search-container">
 			<div id="back-to-blog">
-				<a href="<?php echo get_home_url() . "/blog" ?>">&laquo; Blog</a>
+				<a href="<?php echo get_page_link( get_page_by_title( Blog )->ID);?>">&laquo; Blog</a>
 			</div>
 			<div id="content">
 
@@ -49,7 +49,7 @@
                   					<?php printf( __( 'filed under', 'bonestheme' ) . ': %1$s', get_the_category_list(', ') ); ?>
                   					<?php endif; ?>
 
-                 					<?php the_tags( '<p class="search-p tags"><span class="tags-title">' . __( 'Tags', 'bonestheme' ) . ': ','</span> ', ', ', '</p>' ); ?>
+                 					<?php the_tags( '<p class="search-p tags"><span class="tags-title">' . __( 'Tags', 'bonestheme' ) . ': ','</span> ', ' ', '</p>' ); ?>
 
 								</footer> <!-- end article footer -->
 

@@ -37,6 +37,26 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 add_theme_support('html5', array('search-form'));
 
+function my_logincustomCSSfile() {
+    wp_enqueue_style('login-styles', get_stylesheet_directory_uri() . '/css/login_styles.css');
+}
+add_action('login_enqueue_scripts', 'my_logincustomCSSfile');
+
+function my_loginredrect( $redirect_to, $request, $user ) {
+  if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+    if( in_array('administrator', $user->roles)) {
+      return admin_url();
+    } else {
+      return site_url();
+    }
+  } else {
+      return site_url();
+  }
+}
+ 
+add_filter('login_redirect', 'my_loginredrect', 10, 3);
+
+
 function bones_child_widgets_init(){
 
 	register_sidebar( array(
@@ -87,6 +107,16 @@ function bones_child_widgets_init(){
 		'description'   => 'Sidebar to transalte',
 	    'class'         => '',
 		'before_widget' => '<div id="translate-buttons">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>'
+	));
+	register_sidebar( array(
+		'name'          => __( 'Login Sidebar', 'bonestheme' ),
+		'id'            => 'login-sidebar',
+		'description'   => 'Sidebar to login',
+	    'class'         => '',
+		'before_widget' => '<div id="login-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>'

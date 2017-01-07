@@ -15,6 +15,7 @@
 				<div id="events-container">
 					<div  class="row">
 						<div class="sidebar-single col-md-2">
+							<?php if ( dynamic_sidebar('Login Sidebar') ) : else : endif; ?>
 							<?php if ( dynamic_sidebar('Calendar Sidebar') ) : else : endif; ?>
 						</div>
 
